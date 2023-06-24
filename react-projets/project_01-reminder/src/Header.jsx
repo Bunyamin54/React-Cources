@@ -6,7 +6,7 @@ const Header = () => {
     <nav className="navbar bg-body-tertiary">
   <div className="container">
     <a className="navbar-brand" href="#">
-      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24"/>
+      <img src="https://clarusway.com/wp-content/uploads/2022/12/clarusway-logo-black-768x178.png" alt="Bootstrap" width="150" height="50"/>
     </a>
   </div>
 </nav>
