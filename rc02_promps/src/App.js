@@ -1,16 +1,8 @@
-import Header from "./Header";
-
-function App () {
-
+function App() {
   return (
-
-<div>
-<Header>
-
-</Header>
-</div>
-
-
+    <div className="App">
+      <h1>Hello React</h1>
+    </div>
   )
 }
 
