@@ -41,6 +41,7 @@ const Content = () => {
           src="https://cdn.pixabay.com/photo/2015/11/03/10/23/watercolor-1020509_640.jpg"
           alt=""
         />
+
   
         <p style={parStyle}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, illum.
