@@ -1,12 +1,17 @@
-function Header (){
+//* Harici bir dosya icerisinde olusturulan bir component
+//* export default ile proje icerisinde herhangi bir yerde
+//* kullanima acilmis olur. Kullanmak icin hedef
+//* dosyada import .... from "./..." ile import yapmak yeterlidir.
 
-    // * js alani
-   return <div>
-    {/* jsx  yorum satiri */}  
-    <h1> Header</h1>
-    <p> CW</p>
-     </div>
-}
-
-
-export default Header
+function Header() {
+    //? JS
+    return (
+      <header>
+        {/*  JSX */}
+        <h1>Header</h1>
+      </header>
+    )
+  }
+  
+  export default Header
+  
