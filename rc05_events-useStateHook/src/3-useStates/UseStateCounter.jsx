@@ -17,14 +17,29 @@
 //*    (Custom hook'lar icerisinde bir hook cagrilabilir)
 //?    https://react.dev/reference/react
 //* =============================================================
-
+import { useState } from "react"
 
 const UseStateCounter = () => {
-  return <div>
+  //   let count = 0
 
+  //? count adinda bir state tanimlamis olduk ve baslangic degerine 0 atadik.
+  const [count, setCount] = useState(0)
 
-    
-  </div>
+  const handleInc = () => {
+    // count = count + 1
+    setCount(count + 1)
+    console.log(count)
+  }
+
+  return (
+    <div>
+      <h2>USE STATE HOOK</h2>
+      <h1>Count:{count}</h1>
+      <button onClick={handleInc}>INC</button>
+      <button>CLR</button>
+      <button>DEC</button>
+    </div>
+  )
 }
 
 export default UseStateCounter
