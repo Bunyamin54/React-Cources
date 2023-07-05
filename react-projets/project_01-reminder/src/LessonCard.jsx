@@ -5,7 +5,7 @@ const LessonCard = (props) => {
   return ( 
     
 // eslint-disable-next-line react/style-prop-object
-<div className="card mb-3" style ={{maxwidth: "540px"}}>
+<div className="card mb-3" style ={{maxwidth: "540px" }}>
   <div className="row g-0">
     <div className="col col-md-6 col-lg-4">
       <img src={props.image} className="img-fluid rounded-start" alt={props.name} style= {{width : "100px"}}/>
