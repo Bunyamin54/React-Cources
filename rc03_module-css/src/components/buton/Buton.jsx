@@ -1,4 +1,4 @@
-// import "./Buton.css"
+import "./Buton.css"
 import ButonStyle from "./Buton.module.css"
 
 //* Eğer CSS'deki class adi kebap-case seklinde yazilmis ise

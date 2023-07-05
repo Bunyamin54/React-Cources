@@ -1,5 +1,5 @@
 import Buton from "../buton/Buton"
-// import "./Card.css"
+import "./Card.css"
 import CardStyle from "./Card.module.css"
 
 //* module.css'de derleyici CSS class'larini alarak bunlari unique olacak
