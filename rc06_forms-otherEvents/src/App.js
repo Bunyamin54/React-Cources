@@ -6,8 +6,8 @@ function App() {
   return (
     <div>
       <Form />
-      <KeyboardEvents />
-      <MouseEvent />
+      {/* <KeyboardEvents />
+      <MouseEvent /> */}
     </div>
   )
 }
