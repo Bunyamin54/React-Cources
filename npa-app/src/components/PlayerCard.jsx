@@ -1,8 +1,8 @@
 import React from 'react'
+import Col from "react-bootstrap/Col";
 
-const PlayerCard = () => {
-  return (
-    <div>PlayerCard</div>
+const PlayerCard = ({name, img, statistics}) => {
+  return (<Col>{name}</Col>
   )
 }
 

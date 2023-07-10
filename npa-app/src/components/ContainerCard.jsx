@@ -30,7 +30,7 @@ console.log(data)
          {
 
           filtredData.map((player,i)=> 
- 
+    
  
         //  <PlayerCard  key={i} player = {player} img={player.img} name = {player.name} statistics = {player.statistics} {...player} />
          <PlayerCard  key={i} {...player} />
