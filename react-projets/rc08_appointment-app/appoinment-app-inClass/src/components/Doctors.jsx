@@ -22,9 +22,9 @@ const Doctors = () => {
         Our Doctors
       </h3>
 
-  <Row>
+  <Row className="justify-contnet-center">
   {doctorData.map(({id, img, dep, name})=> (
-  <Col xs={12} sm={6} md={4} lg={3}>
+  <Col xs={12} sm={6} md={4} lg={3} key={id}>
   <img src={img} alt={name}  className="img-thumbnail doctor-img" onClick={handleImgClick}/>
   <h5>{name}</h5>
   <h6>{dep}</h6>
