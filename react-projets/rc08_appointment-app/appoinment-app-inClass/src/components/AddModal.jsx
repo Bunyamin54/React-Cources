@@ -9,6 +9,15 @@ function AddModal({ show, handleClose, apps, setApps }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    setApps([...apps, {
+   id:apps.length+1,
+   patient:name,
+   day:date,
+   consulted: false,
+ 
+
+    }])
     // -----
     handleClose()
   }
