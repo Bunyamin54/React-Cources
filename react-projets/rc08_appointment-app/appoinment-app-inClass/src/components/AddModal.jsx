@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal"
 import Form from "react-bootstrap/Form"
 import { useState } from "react"
 
-function AddModal({ show, handleClose, apps, setApps }) {
+function AddModal({ show, handleClose, apps, setApps , drName}) {
   const [name, setName] = useState("")
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10))
 
@@ -15,7 +15,7 @@ function AddModal({ show, handleClose, apps, setApps }) {
    patient:name,
    day:date,
    consulted: false,
- 
+   doctor:drName,
 
     }])
     // -----
@@ -25,7 +25,7 @@ function AddModal({ show, handleClose, apps, setApps }) {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Appointment for ...</Modal.Title>
+          <Modal.Title>Appointment for {drName}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>

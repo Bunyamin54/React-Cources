@@ -7,7 +7,7 @@ import { useState } from "react"
 
 const Doctors = ({ apps, setApps }) => {
   const [show, setShow] = useState(false)
-
+  const [drName, setDrName] = useState("")
   // const handleImgClick = () => {
   //   setShow(true)
   // }
@@ -24,7 +24,10 @@ const Doctors = ({ apps, setApps }) => {
               src={img}
               alt={name}
               className="img-thumbnail doctor-img"
-              onClick={() => setShow(true)}
+              onClick={() => {
+                setDrName(name)
+                setShow(true)}
+              } 
             />
             <h5>{name}</h5>
             <h6>{dep}</h6>
@@ -36,6 +39,7 @@ const Doctors = ({ apps, setApps }) => {
         handleClose={() => setShow(false)}
         apps={apps}
         setApps={setApps}
+        drName={drName}
       />
     </Container>
   )
