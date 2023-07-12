@@ -8,6 +8,7 @@ import { useState } from "react"
 const Doctors = ({ apps, setApps }) => {
   const [show, setShow] = useState(false)
   const [drName, setDrName] = useState("")
+
   // const handleImgClick = () => {
   //   setShow(true)
   // }
@@ -26,8 +27,8 @@ const Doctors = ({ apps, setApps }) => {
               className="img-thumbnail doctor-img"
               onClick={() => {
                 setDrName(name)
-                setShow(true)}
-              } 
+                setShow(true)
+              }}
             />
             <h5>{name}</h5>
             <h6>{dep}</h6>

@@ -3,22 +3,23 @@ import Modal from "react-bootstrap/Modal"
 import Form from "react-bootstrap/Form"
 import { useState } from "react"
 
-function AddModal({ show, handleClose, apps, setApps , drName}) {
+function AddModal({ show, handleClose, apps, setApps, drName }) {
   const [name, setName] = useState("")
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10))
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
-    setApps([...apps, {
-   id:apps.length+1,
-   patient:name,
-   day:date,
-   consulted: false,
-   doctor:drName,
-
-    }])
-    // -----
+    setApps([
+      ...apps,
+      {
+        id: new Date().getTime(),
+        patient: name,
+        day: date,
+        consulted: false,
+        doctor: drName,
+      },
+    ])
+    setName("")
     handleClose()
   }
   return (
@@ -36,6 +37,7 @@ function AddModal({ show, handleClose, apps, setApps , drName}) {
                 placeholder="Enter name"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
+                required
               />
             </Form.Group>
 
@@ -46,6 +48,7 @@ function AddModal({ show, handleClose, apps, setApps , drName}) {
                 placeholder="Date"
                 onChange={(e) => setDate(e.target.value)}
                 value={date}
+                required
               />
             </Form.Group>
 
