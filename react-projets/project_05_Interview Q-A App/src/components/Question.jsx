@@ -6,7 +6,7 @@ const Question = () => {
         
         <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
-        <Accordion.Header>Accordion Item #1</Accordion.Header>
+        <Accordion.Header>1</Accordion.Header>
         <Accordion.Body>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed porro, impedit eius non dolore ipsa minus earum alias! Iusto, labore!
         </Accordion.Body>
