@@ -2,8 +2,8 @@
 
 const Header = () => {
   return (
-    <div>
-      <h1 className="text-center" >REACT Interview Ouestions And Answers </h1>
+    <div className="header" >
+      <h1 >REACT Interview Ouestions And Answers </h1>
 
     </div>
   )
