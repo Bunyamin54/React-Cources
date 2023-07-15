@@ -1,18 +1,17 @@
 import Accordion from 'react-bootstrap/Accordion';
+import data from "../helper/data"
 
 const Question = () => {
   return (
     <div>
-        
-        <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>1</Accordion.Header>
-        <Accordion.Body>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed porro, impedit eius non dolore ipsa minus earum alias! Iusto, labore!
-        </Accordion.Body>
-      </Accordion.Item> 
-      </Accordion>
-
+     {data.map((item) => (
+        <Accordion defaultActiveKey="0" key={item.id}>
+        <Accordion.Item eventKey="1" key={item.id}>
+          <Accordion.Header>{item.question}</Accordion.Header>
+          <Accordion.Body>{item.answer}</Accordion.Body>
+        </Accordion.Item> 
+        </Accordion>
+    ))}
     </div>
   )
 }
