@@ -7,13 +7,14 @@
 // import { Route, Routes } from "react-router-dom";
 // import Paths from "./pages/Paths";
 // import PersonDetail from "./pages/PersonDetail";
+
 import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
     <>
-
-    <AppRouter/>
+      <AppRouter />
+      {/* //?router yapısını ayrı bir component haline getirip router dosyasına taşıdık */}
       {/* <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
