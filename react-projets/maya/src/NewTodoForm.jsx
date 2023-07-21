@@ -20,9 +20,9 @@ const [newItem, setNewItem] = useState("")
   return (
     
  <form onSubmit={handleSubmit} className= "new-item-form" >
- <div className="form-row">
-  <label htmlFor="item">New Item</label>
-  <input
+ <div className="form-row" >
+  <label htmlFor="item">Todo App</label>
+  <input className='input_header'
    value={newItem} 
    onChange={ e => 
     setNewItem(e.target.value)} 
