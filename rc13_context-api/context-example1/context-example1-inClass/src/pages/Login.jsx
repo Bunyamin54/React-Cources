@@ -1,10 +1,14 @@
-import { useState } from "react";
+
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-
+import { useContext } from "react";
 const Login = () => {
-  const [user, setUser] = useState({ email: "", password: "" });
+
+  //! local state
+  // const [user, setUser] = useState({ email: "", password: "" });
+
+  const {user, setUser}= useContext (LoginContext)
 
   const handleSubmit = (e) => {
     e.preventDefault();
