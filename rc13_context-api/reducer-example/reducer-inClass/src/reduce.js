@@ -14,7 +14,7 @@ export const reducer = (initialState, action) => {
         return {...initialState , catImage:action.payload, error: ""}
 
     case "FAIL":
-   return {...initialState , catImage:"", error:action.payload}
+   return {...initialState , catImage:"", error: action.payload}
     
     default:
         break;
