@@ -6,9 +6,12 @@ import People from "./pages/People";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import PersonDetail from "./pages/PersonDetail";
 import Login from "./pages/Login";
+import { LoginContext } from "./context/LoginContext";
 
 function App() {
   return (
+
+    <LoginContext.Provider value={{}}>
     <BrowserRouter>
       <Navs />
       <Routes>
@@ -23,6 +26,9 @@ function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
+
+     
+   </LoginContext.Provider> 
   );
 }
 
