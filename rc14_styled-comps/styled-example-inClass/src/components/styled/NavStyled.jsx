@@ -7,11 +7,10 @@ justify-content:space-between;
 align-items:center;
 padding: 1rem;
 
-@media (max-width: 700px) {
+@media (max-width: ${({theme}) => theme.breakpoints.md}) {
     flex-direction: column;
     
 }
-
 `;
 
 export default NavStyled;

@@ -1,4 +1,4 @@
-import Nav from "./Nav"
+
 import Button from "./styled/Button"
 import HeaderStyled from "./styled/HeaderStyled"
 import Image from "./styled/image"

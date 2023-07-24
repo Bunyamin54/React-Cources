@@ -4,13 +4,24 @@ import styled from 'styled-components';
  display:flex;
  justify-content:center;
  align-items:center;
- 
- @media (max-width: 700px) {
+ gap:1rem;
+
+
+
+ @media (max-width: ${({theme}) => theme.breakpoints.md}) {
     flex-direction: column;
     
 }
 
+  &  div {
+   flex:2;
 
+  }
+  
+  & img {
+  flex:1;
+
+  }
 `;
 
 export default HeaderStyled;
