@@ -7,9 +7,11 @@ const Nav = () => {
     
        <div>
 
-        <img src="./images/logo.png" width="150px" alt="logo"  />
+        <img src="./images/logo.png" width="250px" alt="logo"  />
         
-        </div> 
+        </div>
+
+
          <div>
          <Button primary>Apply Courses</Button>
          <Button>Talk to Advisere</Button>
