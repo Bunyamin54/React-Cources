@@ -7,6 +7,21 @@ color:white;
 border: 2px solid hotpink;
 font-size:1.3rem;
 padding: 0.7rem  3rem;
+border-radius: 20px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+&:hover {
+    cursor: pointer;
+    transform:scale(0.96)
+}
 
 `
+// ! Extension ozelligi
+ export const DarkButton = styled(Button) `
 
+background-color:black;
+border:none;
+color:white
+
+
+`

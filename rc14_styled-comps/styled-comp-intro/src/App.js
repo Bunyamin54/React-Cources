@@ -1,13 +1,27 @@
-
-import { Button } from './components/Buton.styled';
+import { Button, DarkButton } from "./components/Buton.styled"
+import Flex from "./components/Flex"
+import Title from "./components/Title"
 
 const App = () => {
   return (
     <>
-      <h1>Styled Components</h1>
-      <Button>Tikla</Button>
-    </>
-  );
-};
+      <Flex bg="#bebe">
+        <Title renk="white" bgRenk="red">
+          Styled Components
+        </Title>
+        <Button>Tikla</Button>
+        <DarkButton>Send</DarkButton>
+      </Flex>
 
-export default App;
+      <Title renk = "purple">Flexbox</Title>
+     
+      <Title bgRenk = "green" renk= "white">Flexbox</Title>
+
+      <Flex bg="tomato">
+        <h1>PROPS</h1>
+      </Flex>
+    </>
+  )
+}
+
+export default App
