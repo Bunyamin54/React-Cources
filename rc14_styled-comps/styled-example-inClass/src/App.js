@@ -8,7 +8,7 @@ import { ThemeProvider } from "styled-components"
 const App = () => {
   const styles = {
     colors: {
-      primary: "#eee",
+      primary: "#beee",
       secondary: "#bebe",
     },
     breakpoints: { xs: "300px", sm: "500px", md: "700px" },

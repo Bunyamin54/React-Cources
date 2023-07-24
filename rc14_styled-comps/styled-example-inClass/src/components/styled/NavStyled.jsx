@@ -11,6 +11,8 @@ padding: 1rem;
     flex-direction: column;
     
 }
+
+background-color : ${({theme}) => theme.colors.primary}
 `;
 
 export default NavStyled;
