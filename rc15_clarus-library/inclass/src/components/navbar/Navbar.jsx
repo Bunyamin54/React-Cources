@@ -2,7 +2,21 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <Nav>
+
+< Logo>  Clarusway Library</Logo>
+
+<HamburgerIcon> 
+
+{menuIcon}
+</HamburgerIcon>
+
+<Manu>
+
+  <MenuLink>Home</MenuLink>
+</Manu>
+
+    </Nav>
   )
 }
 
