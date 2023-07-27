@@ -7,18 +7,17 @@ import AuthContextProvider from "./context/AuthContext";
 import BooksContextProvider from "./context/BooksContext";
 
 function App() {
-  const {myTheme} = useThemeContext()
-  const themes = myTheme === "light" ? lightTheme : darktheme
+  const { myTheme } = useThemeContext();
+  const themes = myTheme === "light" ? lightTheme : darktheme;
   return (
     <>
       <ThemeProvider theme={themes}>
+        <GlobalStyles />
         <AuthContextProvider>
           <BooksContextProvider>
-           <AppRouter />
+            <AppRouter />
           </BooksContextProvider>
-          <GlobalStyles />
         </AuthContextProvider>
-        
       </ThemeProvider>
     </>
   );
