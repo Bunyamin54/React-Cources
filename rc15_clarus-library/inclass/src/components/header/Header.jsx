@@ -36,6 +36,7 @@ const Header = () => {
           name="query"
           value={searchInfo.query}
           onChange={handleChange}
+          // onChange={()=> setSearchInfo({...searchInfo, query:e.target.value})}
           required
         />
         <SelectBox
