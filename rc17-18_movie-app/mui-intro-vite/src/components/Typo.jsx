@@ -40,6 +40,16 @@ const Typo = () => {
         >
           Button Text
         </Typography>
+
+        <Typography variant="h2" mt={2} color={"koyuMor.light"}>
+          Button Text
+        </Typography>
+        <Typography variant="h2" mt={2} color={"koyuMor.main"}>
+          Button Text
+        </Typography>
+        <Typography variant="h2" mt={2} color={"koyuMor.dark"}>
+          Button Text
+        </Typography>
       </Box>
 
       <Stack
@@ -55,7 +65,7 @@ const Typo = () => {
         <Button variant="contained" color="secondary">
           Click
         </Button>
-        <Button variant="contained" color="success">
+        <Button variant="contained" color="koyuMor">
           Click
         </Button>
         <Button variant="contained" color="warning">
