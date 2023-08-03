@@ -1,13 +1,14 @@
 import { useState } from 'react'
 
 import './App.css'
+import Typo from './components/Typo'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>Mui</h1>
+      <Typo/>
     </>
   )
 }
