@@ -16,3 +16,23 @@
 
 *rooter yapisi 
 
+ * en kapsayici bir yapiya ihtiyacimiz var 
+<BrowserRouter>  
+<Navba/> heryerde kullanacagimiz navbari routes yapisi disina aliriz.
+<Routes>
+   <Route path = "/" element = {<Main/>}/>
+   <Route path = "/login" element = {<Login/>}/>
+   <Route path = "/details/:id" element={<MovieDetail/>}/>  details sayfasindan sonra ne gelirse gelsin movide details sayfasini sergileyecek . dinamik olmasi lazm
+
+
+
+</Routes>
+  
+</BrowserRouter>
+
+<App>
+
+    <AppRouter/>   AppRouter yapisi App js de cagrildi.
+</App>
+
+min-h-screen boyutunda olsun demek;
