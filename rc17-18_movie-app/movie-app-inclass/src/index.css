@@ -1,12 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-@layer base {
-  
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 /** element bazında default olarak vermek istediğimiz stilleri base layer'da veriyoruz */
@@ -117,9 +111,17 @@ body {
 
 @keyframes animate {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 0px #28292d inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
