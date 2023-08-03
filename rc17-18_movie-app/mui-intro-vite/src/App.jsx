@@ -2,13 +2,15 @@
 import './App.css'
 import Typo from './components/Typo'
 import TextFieldComp from './components/TextFieldComp'
+import CardComp from './components/CardComp'
 
 function App() {
 
   return (
     <>
-      <Typo/>
-      <TextFieldComp/>
+      {/* <Typo/>
+      <TextFieldComp/> */}
+      <CardComp/>
     </>
   )
 }
