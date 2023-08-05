@@ -1,3 +1,9 @@
+//? counter type declarations
+//* string'ler hataya meyillidir.Bu hatalari minimize etmek icin string type'lari degiskenlere saklanir ve degisken olarak kullanilabilir.
+export const INC = "INC"
+export const DEC = "DEC"
+export const CLR = "CLR"
+
 //? State'lerin baslangic durumlarinin belirlenmesi
 const initialState = {
   count: 10,
@@ -6,13 +12,13 @@ const initialState = {
 //? Pure Function (reducer)
 export const counterReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "INC": //? count:  state.count + 1
+    case INC: //? count:  state.count + 1
       return { count: state.count + 1 }
 
-    case "DEC":
+    case DEC:
       return { count: state.count - 1 }
 
-    case "CLR":
+    case CLR:
       return { count: 0 }
     default:
       return state
