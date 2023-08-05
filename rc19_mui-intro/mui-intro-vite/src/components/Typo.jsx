@@ -6,6 +6,7 @@ import Button from "@mui/material/Button"
 
 import Box from "@mui/material/Box"
 import Container from "@mui/material/Container"
+import Stack from "@mui/material/Stack"
 
 const Typo = () => {
   return (
@@ -25,6 +26,24 @@ const Typo = () => {
       </Typography>
 
     </Box>
+
+ <Stack direction="row" spacing={2} mt={3} justifyContent={"center"} alignItems={"center"}>
+ <Button variant="outlined" color="primary"> Click </Button>
+ <Button variant="contained" color="secondary"> Click </Button>
+ <Button  color="error"> Click </Button>
+ <Button variant="contained" color="success"> Click </Button>
+ <Button variant="contained" color="warning"> Click </Button>
+ <Button variant="contained" sx={{color: "purple", backgroundColor:"yellow"}}> Click </Button>
+ <Button variant="contained" sx={{color: "primary.main", backgroundColor:"secondary.light"}}> Click </Button>
+
+
+
+
+ </Stack>
+
+
+
+
     </Container>
   )
 }
