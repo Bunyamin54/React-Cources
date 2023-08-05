@@ -34,7 +34,7 @@ const Typo = () => {
  <Button variant="contained" color="success"> Click </Button>
  <Button variant="contained" color="warning"> Click </Button>
  <Button variant="contained" sx={{color: "purple", backgroundColor:"yellow"}}> Click </Button>
- <Button variant="contained" sx={{color: "primary.main", backgroundColor:"secondary.light"}}> Click </Button>
+ <Button variant="contained" sx={{color: "primary.dark", backgroundColor:"secondary.light"}}> Click </Button>
 
 
 
