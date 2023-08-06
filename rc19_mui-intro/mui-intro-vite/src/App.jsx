@@ -6,8 +6,8 @@ function App() {
 
   return (
     <>
-     {/* <Typo/>
-     <TextFieldComp/> */}
+     <Typo/>
+     <TextFieldComp/>
      <CardComp/>
     </>
   )
