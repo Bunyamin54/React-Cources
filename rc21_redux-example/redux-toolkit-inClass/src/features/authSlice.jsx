@@ -23,6 +23,8 @@ const authSlice = createSlice ({
   }
  }
 })
-
+//? olusan action fonksiyonlari sliceAdi.actions"dan destructure edilerek export edilir. 
 export const { setUser,  clearUser} = authSlice.actions
 export default authSlice.reducer
+
+//? reducer ise sliceAdi.reducer seklinde export edilir. 
