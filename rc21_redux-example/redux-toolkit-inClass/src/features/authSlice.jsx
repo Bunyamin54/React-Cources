@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-
+//? action creator fonskiyonlarini hemde reduceri tek bir hamlede olusturabiliriz. 
 
 const initialState = {
     user : "",
