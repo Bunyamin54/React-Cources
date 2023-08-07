@@ -1,30 +1,27 @@
-import { createSlice } from '@reduxjs/toolkit'
-
-//? action creator fonskiyonlarini hemde reduceri tek bir hamlede olusturabiliriz. 
+import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    user : "",
+  user: "",
 }
 
-const authSlice = createSlice ({
+//? Slice ile bir global state'in hem action type'lari , hem action creator fonksiyonlarini hem de reducer'i tek bir hamlede olusturabiliriz.
 
- name : "auth", //? action type i olusturmak icin
- initialState,  //? statin baslangic degeri veiyoruz 
- reducers:{  //? action creater fonks ve reducer icin 
-  
-  setUser: (state, action)  => {
-
-     state.user = action.payload
-
-  }
-
-  clearUser : (state) => {
-    state.user = ""
-  }
- }
+const authSlice = createSlice({
+  name: "auth", //? action type'ı olusturmak icin
+  initialState, //? state'in bslangic degeri icin
+  reducers: {
+    //? action creator fonks. ve reducer icin
+    setUser: (state, action) => {
+      state.user = action.payload
+    },
+    clearUser: (state) => {
+      state.user = ""
+    },
+  },
 })
-//? olusan action fonksiyonlari sliceAdi.actions"dan destructure edilerek export edilir. 
-export const { setUser,  clearUser} = authSlice.actions
-export default authSlice.reducer
 
-//? reducer ise sliceAdi.reducer seklinde export edilir. 
+//? olusan action fonksiyonları sliceAdi.actions 'dan destructure edilerek export edilir.
+export const { setUser, clearUser } = authSlice.actions
+
+//? yazilan slice'in reducer'i sliceAdi.reducer seklinde export edilmelidir.
+export default authSlice.reducer
