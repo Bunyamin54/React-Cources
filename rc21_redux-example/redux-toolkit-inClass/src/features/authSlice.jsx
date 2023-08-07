@@ -8,9 +8,9 @@ const initialState = {
 
 const authSlice = createSlice ({
 
- name : "auth", 
- initialState,
- reducers:{
+ name : "auth", //? action type i olusturmak icin
+ initialState,  //? statin baslangic degeri veiyoruz 
+ reducers:{  //? action creater fonks ve reducer icin 
   
   setUser: (state, action)  => {
 
