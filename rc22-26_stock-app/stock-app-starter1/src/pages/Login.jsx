@@ -14,7 +14,9 @@ import {Formik} from "formik"
 
 const Login = () => {
   const navigate = useNavigate()
+  const loginSchema ={
 
+  }
   return (
     <Container maxWidth="lg">
       <Grid
@@ -53,45 +55,48 @@ const Login = () => {
           </Typography>
   
           <Formik
-          
           initialValues={{email:"", password:""}}
-          validationSchema={loginShema}
-          onSubmit={}
-          
-          
-          
-          
-          
-          >
+          validationSchema={loginSchema}
+          onSubmit={(values, action) => (
+
+         action.resetForm()
+         action.setSubmitting(false)
 
 
+          )}
+           >
+   { () => (
+
+<Box
+component="form"
+sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+>
+<TextField
+  label="Email"
+  name="email"
+  id="email"
+  type="email"
+  variant="outlined"
+/>
+<TextField
+  label="password"
+  name="password"
+  id="password"
+  type="password"
+  variant="outlined"
+/>
+<Button variant="contained" type="submit">
+  Submit
+</Button>
+</Box>
+
+   )}
 
 
           </Formik>
 
 
-          <Box
-            component="form"
-            sx={{ display: "flex", flexDirection: "column", gap: 2 }}
-          >
-            <TextField
-              label="Email"
-              name="email"
-              id="email"
-              type="email"
-              variant="outlined"
-            />
-            <TextField
-              label="password"
-              name="password"
-              id="password"
-              type="password"
-              variant="outlined"
-            />
-            <Button variant="contained" type="submit">
-              Submit
-            </Button>
-          </Box>
+          
 
           <Box sx={{ textAlign: "center", mt: 2 }}>
             <Link to="/register">Do you have not an account?</Link>
