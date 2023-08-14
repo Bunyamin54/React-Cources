@@ -29,6 +29,9 @@ dependencies:
   formik:
     specifier: ^2.4.3
     version: 2.4.3(react@18.2.0)
+  persis:
+    specifier: ^0.2.0
+    version: 0.2.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -47,6 +50,9 @@ dependencies:
   react-toastify:
     specifier: ^9.1.3
     version: 9.1.3(react-dom@18.2.0)(react@18.2.0)
+  redux:
+    specifier: ^4.2.1
+    version: 4.2.1
   yup:
     specifier: ^1.2.0
     version: 1.2.0
@@ -7723,6 +7729,10 @@ packages:
 
   /performance-now@2.1.0:
     resolution: {integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==}
+    dev: false
+
+  /persis@0.2.0:
+    resolution: {integrity: sha512-7UwdTFD8avCiXEBUku428hm1vnGX7ANgKyBOaUN6Hq2ETQWd3jpWLFXdXwb+t9Nq5KRvDfseSQVclDxoaqhwTw==}
     dev: false
 
   /picocolors@0.2.1:
