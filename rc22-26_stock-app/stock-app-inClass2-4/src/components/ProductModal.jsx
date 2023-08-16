@@ -8,7 +8,7 @@ import { modalStyle } from "../styles/globalStyles"
 import useStockCall from "../hooks/useStockCall"
 
 export default function ProductModal({ open, handleClose, info, setInfo }) {
-  const { postStockData, putStockData } = useStockCall()
+  const { postStockData } = useStockCall()
 
   const handleChange = (e) => {
     setInfo({ ...info, [e.target.name]: e.target.value })

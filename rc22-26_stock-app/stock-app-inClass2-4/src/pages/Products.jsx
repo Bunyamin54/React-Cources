@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react"
 import Typography from "@mui/material/Typography"
 import Button from "@mui/material/Button"
-import Grid from "@mui/material/Grid"
 import { useSelector } from "react-redux"
 import useStockCall from "../hooks/useStockCall"
-import FirmCard from "../components/FirmCard"
 import ProductModal from "../components/ProductModal"
 import ProductTable from "../components/Producttable"
 
