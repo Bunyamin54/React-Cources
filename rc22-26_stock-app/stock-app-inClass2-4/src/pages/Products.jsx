@@ -26,7 +26,7 @@ const Products = () => {
 
   useEffect(() => {
     // getFirms()
-    getStockData("firms")
+    getStockData("products")
   }, [])
 
   return (
