@@ -1,14 +1,20 @@
 import { useState } from "react"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
-import Typography from "@mui/material/Typography"
 import TextField from "@mui/material/TextField"
 import Modal from "@mui/material/Modal"
 import { modalStyle } from "../styles/globalStyles"
 import useStockCall from "../hooks/useStockCall"
 
-export default function ProductModal({ open, handleClose, info, setInfo }) {
+export default function ProductModal({ open, handleClose }) {
   const { postStockData } = useStockCall()
+
+  const [info, setInfo] = useState({
+    name: "",
+    phone: "",
+    address: "",
+    image: "",
+  })
 
   const handleChange = (e) => {
     setInfo({ ...info, [e.target.name]: e.target.value })
@@ -17,12 +23,7 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(info.id)
-    if (info.id) {
-      putStockData("firms", info)
-    } else {
-      postStockData("products", info)
-    }
-
+    postStockData("products", info)
     handleClose()
   }
   return (

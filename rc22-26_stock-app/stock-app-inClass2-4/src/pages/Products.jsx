@@ -8,24 +8,13 @@ import ProductTable from "../components/Producttable"
 
 const Products = () => {
   const { getStockData } = useStockCall()
-  const { firms } = useSelector((state) => state.stock)
-
-  const [info, setInfo] = useState({
-    name: "",
-    phone: "",
-    address: "",
-    image: "",
-  })
+  const { products } = useSelector((state) => state.stock)
 
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
-  const handleClose = () => {
-    setOpen(false)
-    setInfo({ name: "", phone: "", address: "", image: "" })
-  }
+  const handleClose = () => setOpen(false)
 
   useEffect(() => {
-    // getFirms()
     getStockData("products")
   }, [])
 
@@ -38,12 +27,7 @@ const Products = () => {
         NEW PRODUCT
       </Button>
 
-      <ProductModal
-        open={open}
-        handleClose={handleClose}
-        info={info}
-        setInfo={setInfo}
-      />
+      <ProductModal open={open} handleClose={handleClose} />
       <ProductTable />
     </div>
   )
