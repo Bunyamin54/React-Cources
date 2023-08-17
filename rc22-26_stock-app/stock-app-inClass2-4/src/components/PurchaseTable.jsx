@@ -47,7 +47,7 @@ export default function PurchaseTable({ handleOpen, setInfo }) {
     {
       field: "quantity",
       headerName: "Quantity",
-      minWidth: 50,
+      minWidth: 70,
       headerAlign: "center",
       align: "center",
       flex: 1,
@@ -56,7 +56,7 @@ export default function PurchaseTable({ handleOpen, setInfo }) {
     {
       field: "price",
       headerName: "Price",
-      minWidth: 50,
+      minWidth: 70,
       headerAlign: "center",
       align: "center",
       flex: 1,
@@ -65,7 +65,7 @@ export default function PurchaseTable({ handleOpen, setInfo }) {
     {
       field: "price_total",
       headerName: "Amount",
-      minWidth: 50,
+      minWidth: 90,
       headerAlign: "center",
       align: "center",
       flex: 1,
@@ -74,7 +74,7 @@ export default function PurchaseTable({ handleOpen, setInfo }) {
     {
       field: "actions",
       headerName: "Actions",
-      minWidth: 40,
+      minWidth: 70,
       headerAlign: "center",
       align: "center",
       flex: 1,

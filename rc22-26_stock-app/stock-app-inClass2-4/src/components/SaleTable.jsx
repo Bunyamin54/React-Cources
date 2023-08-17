@@ -7,7 +7,7 @@ import { btnStyle } from "../styles/globalStyles"
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever"
 import EditIcon from "@mui/icons-material/Edit"
 
-export default function SaleTable({handleOpen,setInfo}) {
+export default function SaleTable({ handleOpen, setInfo }) {
   const { sales } = useSelector((state) => state.stock)
   const { deleteStockData } = useStockCall()
 
@@ -48,7 +48,7 @@ export default function SaleTable({handleOpen,setInfo}) {
     {
       field: "price",
       headerName: "Price",
-      minWidth: 50,
+      minWidth: 80,
       headerAlign: "center",
       align: "center",
       flex: 1,
@@ -56,7 +56,7 @@ export default function SaleTable({handleOpen,setInfo}) {
     {
       field: "price_total",
       headerName: "Amount",
-      minWidth: 50,
+      minWidth: 80,
       headerAlign: "center",
       align: "center",
       flex: 1,
@@ -64,7 +64,7 @@ export default function SaleTable({handleOpen,setInfo}) {
     {
       field: "actions",
       headerName: "Actions",
-      minWidth: 40,
+      minWidth: 80,
       headerAlign: "center",
       align: "center",
       flex: 1,
