@@ -75,7 +75,7 @@ export default function ProductTable() {
         autoHeight
         rows={products}
         columns={columns}
-        pageSizeOptions={[20, 50, 75, 100]}
+        pageSizeOptions={[20, 50, 75, 100]} //? sayfa basina satir sayisi
         disableRowSelectionOnClick
         slots={{ toolbar: GridToolbar }}
       />
