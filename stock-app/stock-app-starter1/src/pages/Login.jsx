@@ -10,12 +10,14 @@ import TextField from "@mui/material/TextField"
 import { Button } from "@mui/material"
 import {Formik, Form} from "formik"
 import { object, string,} from 'yup';
+import { login } from "../hooks/authApiCall"
 
 
 const Login = () => {
   const navigate = useNavigate()
 
   //? harici validasyon semasi
+
 
     const loginSchema = object({
    
@@ -25,7 +27,7 @@ const Login = () => {
       password: string().required("Bu alan zorunludur")
       .min(8, "En az 8 karakter girilmelidir.")
       .max(16, "En fazla 16 karakter girilmelidir.")
-      .matches(/\d+/, "En az bir rakam icermelidir.")
+      // .matches(/\d+/, "En az bir rakam icermelidir.")
       .matches(/[a-z]/, "En az bir kucuk harf icermelidir.")
       .matches(/[A-Z]/, "En az bir buyuk harf icermelidir.")
       .matches(/[!,?<>%#$£+-.]+/, "En az bir ozel karakter icermelidir.")
@@ -75,12 +77,10 @@ const Login = () => {
            initialValues={{email: "", password:"" }}
            validationSchema={loginSchema}
            onSubmit={(values, action ) => {
-           
+           login(values)
             action.resetForm()
             action.setSubmitting(false)
-
-
-           }}
+          }}
            >
 
            {({handleChange, handleBlur, values,touched, errors}) => (
