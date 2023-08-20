@@ -28,7 +28,7 @@ const Login = () => {
       .matches(/\d+/, "En az bir rakam icermelidir.")
       .matches(/[a-z]/, "En az bir kucuk harf icermelidir.")
       .matches(/[A-Z]/, "En az bir buyuk harf icermelidir.")
-      .matches(/[!,?<>%#$£+-.]/, "En az bir ozel karakter icermelidir.")
+      .matches(/[!,?<>%#$£+-.]+/, "En az bir ozel karakter icermelidir.")
      
     })
     
