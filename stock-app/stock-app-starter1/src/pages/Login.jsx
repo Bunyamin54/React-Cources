@@ -8,16 +8,31 @@ import { Link, useNavigate } from "react-router-dom"
 import Box from "@mui/material/Box"
 import TextField from "@mui/material/TextField"
 import { Button } from "@mui/material"
-import {Formik} from "formik"
+import {Formik, Form} from "formik"
+import { object, string,} from 'yup';
 
 
 const Login = () => {
   const navigate = useNavigate()
 
   //? harici validasyon semasi
-   const loginShema = {
 
-   }
+    const loginSchema = object({
+   
+      email: string()
+      .email("Lutfen valid bir email giriniz!.")
+      .required("Bu alan bos birakilamaz!"),
+      password: string().required("Bu alan zorunludur")
+      .min(8, "En az 8 karakter girilmelidir.")
+      .max(16, "En fazla 16 karakter girilmelidir.")
+      .matches(/\d+/, "En az bir rakam icermelidir.")
+      .matches(/[a-z]/, "En az bir kucuk harf icermelidir.")
+      .matches(/[A-Z]/, "En az bir buyuk harf icermelidir.")
+     
+    })
+    
+
+   
   return (
     <Container maxWidth="lg">
       <Grid
@@ -57,7 +72,7 @@ const Login = () => {
            
            <Formik
            initialValues={{email: "", password:"" }}
-           validationSchema={loginShema}
+           validationSchema={loginSchema}
            onSubmit={(values, action ) => {
            
             action.resetForm()
@@ -67,9 +82,12 @@ const Login = () => {
            }}
            >
 
-           {() => (
+           {({handleChange, handleBlur, values,touched, errors}) => (
+
+ <Form>
+
 <Box
-component="form"
+
 sx={{ display: "flex", flexDirection: "column", gap: 2 }}
 >
 <TextField
@@ -78,6 +96,11 @@ sx={{ display: "flex", flexDirection: "column", gap: 2 }}
   id="email"
   type="email"
   variant="outlined"
+  onChange={handleChange}
+  onBlur={handleBlur}
+  value={values.email}
+  error={touched.email &&Boolean(errors.email) }
+  helperText={errors.email}
 />
 <TextField
   label="password"
@@ -85,11 +108,18 @@ sx={{ display: "flex", flexDirection: "column", gap: 2 }}
   id="password"
   type="password"
   variant="outlined"
+  onChange={handleChange}
+  onBlur={handleBlur}
+  value={values.password}
+  error={touched.password && Boolean(errors.password) }
+  helperText={errors.password}
 />
 <Button variant="contained" type="submit">
   Submit
 </Button>
 </Box>
+ </Form>
+
  )}
 
  </Formik>
